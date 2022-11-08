@@ -14,3 +14,7 @@
     height: 80vh;
     border-radius:15px ;
   }
+  .banner-Button a button{
+    border: 2px solid white;
+    color: white;
+  }
