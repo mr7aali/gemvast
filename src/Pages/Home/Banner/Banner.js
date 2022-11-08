@@ -43,6 +43,7 @@ const Banner = () => {
 
 
             </div>
+            
             <div className="flex justify-center w-full py-2 gap-2 absolute bottom-5  banner-Button">
                 <a href="#item1" >
                     <button className="btn btn-outline   btn-circle">1</button>

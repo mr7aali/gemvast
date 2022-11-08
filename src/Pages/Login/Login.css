@@ -1,8 +1,13 @@
 .login-img{
-   padding: 15px;
+   
     height: 100%;
 }
 .login-card{
  
     height: 100%;
+}
+.google-singin button{
+   
+    background-color: #49B546;
+    
 }
