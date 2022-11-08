@@ -1,4 +1,5 @@
 import Login from "../Pages/Login/Login";
+import SingUp from "../Pages/SingUp/SingUp";
 
 const { createBrowserRouter } = require("react-router-dom");
 const { default: Main } = require("../Layout/Main");
@@ -12,14 +13,19 @@ const router= createBrowserRouter([
             {
                 path:'/',
                 element:<Home></Home>
+            },
+            {
+                path:'/login',
+                element:<Login></Login>
+            },
+            {
+                path:'/singup',
+                element:<SingUp></SingUp>
             }
            
         ]
-    },
-    {
-        path:'/login',
-        element:<Login></Login>
     }
+  
 ])
 
 export default router;

@@ -1,4 +1,8 @@
-.login-page{
-  border: 2px solid red;
-  
+.login-img{
+   padding: 15px;
+    height: 100%;
+}
+.login-card{
+ 
+    height: 100%;
 }
