@@ -1,0 +1,11 @@
+.JoinMeCard{
+    display: flex;
+    justify-content: space-between;
+    background-color: beige;
+}
+.JoinMeCard div{
+  border: 1px solid red;
+  height: 300px;
+  width: 300px;
+  
+}
