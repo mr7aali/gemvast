@@ -13,8 +13,8 @@ const Banner = () => {
                         <img alt=' ' src={img1} className="w-full" />
                  </div>
                     <div className='absolute top-1/4 left-24'>
-                        <h1 className='text-6xl text-white font-bold '>Healthy Body <br /> Fresh Mind</h1>
-                        <p className='text-white'>World is committed to making participation in the event harass ment free on experience for</p>
+                        <h1 className='text-6xl text-white font-bold '>Healthy Body <br /> <span className='text-red-700'>Fresh Mind</span></h1>
+                        <p className='text-white mt-5 text-2xl'>Livestrong has an incredible wealth of information on exercises, health care, <br/> physical health, mental health and more. It is updated multiple times a day and comes complete , <br/> with great forums and up-to-date information about fitness trends that are relevant in today’s world.</p>
                     </div>
 
                 </div>
@@ -24,8 +24,8 @@ const Banner = () => {
                         <img alt=' ' src={img2} className="w-full" />
                  </div>
                     <div className='absolute top-1/4 left-24'>
-                        <h1 className='text-6xl text-white font-bold '>Healthy Body <br /> Fresh Mind</h1>
-                        <p className='text-white'>World is committed to making participation in the event harass ment free on experience for</p>
+                        <h1 className='text-6xl text-white font-bold '>Don't Be Brat <br /> Burn Fat</h1>
+                        <p className='text-white mt-5 text-2xl'>As the name would imply, Muscle & Fitness is narrowly focused around how to <br/> build your muscles and stay in shape. It contains great information on specific ways <br/> to build muscle, including the types of workouts that are best for these purposes</p>
                     </div>
 
                 </div>
@@ -35,8 +35,8 @@ const Banner = () => {
                         <img alt=' ' src={img3} className="w-full" />
                  </div>
                     <div className='absolute top-1/4 left-24'>
-                        <h1 className='text-6xl text-white font-bold '>Healthy Body <br /> Fresh Mind</h1>
-                        <p className='text-white'>World is committed to making participation in the event harass ment free on experience for</p>
+                        <h1 className='text-6xl text-white font-bold '> Work For  <br /> <span className='text-red-700' >Fresh Mind</span></h1>
+                        <p className='text-white mt-5 text-2xl'>We’re all looking for that sweet spot between having peace of mind for most, if not <br/> all of our day. We also know we need to keep working at it. <br/>Delve into our resources for some inspiration, learning and tools to find what you most need, right now. </p>
                     </div>
 
                 </div>
