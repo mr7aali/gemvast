@@ -1,4 +1,5 @@
 import AllServices from "../Pages/AllServices/AllServices";
+import Details from "../Pages/Details/Details";
 import Login from "../Pages/Login/Login";
 import SingUp from "../Pages/SingUp/SingUp";
 
@@ -30,7 +31,14 @@ const router= createBrowserRouter([
                 element:<AllServices> </AllServices>,
                 loader:()=> fetch('http://localhost:5000/allservice')
 
+            },
+            {
+                //http://localhost:5000/services/636b4bd0774bc73e7540bf97
+                path:'/services/:id',
+                 loader:({params})=>fetch(`http://localhost:5000/services/${params.id}`),
+                element:<Details></Details>
             }
+
            
         ]
     }

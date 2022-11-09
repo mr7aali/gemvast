@@ -36,7 +36,10 @@ const Card = ({ serv }) => {
                     </p>
                     <div className="card-actions justify-end">
                         <p className='text-xl mt-2 font-bold'> Cost {price}$</p>
+                        
+                        <Link to={`/services/${_id}`}>
                         <button className="btn btn-primary">View Details</button>
+                        </Link>
                     </div>
                 </div>
             </div>
