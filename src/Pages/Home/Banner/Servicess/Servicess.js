@@ -1,10 +1,20 @@
 import React from 'react';
+import Card from '../../Card/Card';
+import './Servicess.css'
 
-const Servicess = () => {
+const Servicess = ({service}) => {
+    console.log(service)
+    
+  
     return (
-        <div>
-            <h1>My servicess</h1>
-        </div>
+       <div className='services-container '>
+        {
+             service.map(serv=><Card 
+             key={serv._id}
+             serv={serv}
+             ></Card>)
+        }
+       </div>
     );
 };
 

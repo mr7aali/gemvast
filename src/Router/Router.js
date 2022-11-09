@@ -1,3 +1,4 @@
+import AllServices from "../Pages/AllServices/AllServices";
 import Login from "../Pages/Login/Login";
 import SingUp from "../Pages/SingUp/SingUp";
 
@@ -12,7 +13,9 @@ const router= createBrowserRouter([
         children:[
             {
                 path:'/',
-                element:<Home></Home>
+                element:<Home></Home>,
+                loader:()=> fetch('http://localhost:5000/service')
+
             },
             {
                 path:'/login',
@@ -21,6 +24,12 @@ const router= createBrowserRouter([
             {
                 path:'/singup',
                 element:<SingUp></SingUp>
+            },
+            {
+                path:'/services',
+                element:<AllServices> </AllServices>,
+                loader:()=> fetch('http://localhost:5000/allservice')
+
             }
            
         ]
