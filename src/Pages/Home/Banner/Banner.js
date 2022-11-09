@@ -5,7 +5,7 @@ import img2 from '../../../assets/bann2.jpg'
 import img3 from '../../../assets/bann3.jpg'
 const Banner = () => {
     return (
-        <div  className=' rounded-lg mb-10 relative'>
+        <div  className=' rounded-lg mb-10 relative max-w-screen-xl	mx-auto	'>
             <div className="carousel w-full">
                 <div id="item1" className="carousel-item w-full relative">
 

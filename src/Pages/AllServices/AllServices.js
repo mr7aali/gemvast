@@ -5,7 +5,7 @@ import './AllServices.css'
 const AllServices = () => {
     const service = useLoaderData();
     return (
-        <div>
+        <div className='max-w-screen-xl mx-auto'>
             <div>
                 <h1 className='text-5xl font-bold m-20 text-center'>All  Service <span className='text-red-700'>Category</span></h1>
             </div>

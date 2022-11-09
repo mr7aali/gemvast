@@ -6,7 +6,7 @@ const Details = () => {
     console.log(service)
     const {details,photo,price,title}= service;
     return (
-        <div className='my-40 details-div'>
+        <div className='my-40 details-div max-w-screen-xl	mx-auto'>
             <div className="card lg:card-side bg-base-100 shadow-xl">
                 <figure><img className='h-full' src={photo} alt="Album" /></figure>
                 <div className="card-body">

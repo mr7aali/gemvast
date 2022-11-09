@@ -2,12 +2,12 @@ import React from 'react';
 import './JoinUs.css'
 const JoinUs = () => {
     return (
-        <div>
+        <div className='full-join-us-container'>
             <div>
                 <h1 className='text-center text-5xl pb-10 text-primary font-bold'>Why You Will <span className='text-red-600'> Join </span></h1>
                 <p className='text-3xl text-center pb-10'>World is committed to making participation in the event a harassment <br /> free experience for everyone, regardless of level of experience</p>
             </div>
-            <div className='JoinMeCard mb-32'>
+            <div className='JoinMeCard mb-32 max-w-screen-xl	mx-auto	'>
                 <div>
                     <h1 className='text-3xl mt-3 font-bold'>Good for health</h1>
                     <p className='text-xl mt-5'>We’re stating the obvious with this one but did you know that being active daily reduces the risk of heart disease, strokes and type 2 diabetes? </p>

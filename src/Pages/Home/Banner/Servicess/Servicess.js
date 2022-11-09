@@ -7,7 +7,7 @@ const Servicess = ({service}) => {
     
   
     return (
-       <div className='services-container '>
+       <div className='services-container max-w-screen-xl	mx-auto	'>
         {
              service.map(serv=><Card 
              key={serv._id}
