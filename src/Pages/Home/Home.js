@@ -4,6 +4,7 @@ import Banner from './Banner/Banner';
 import Servicess from './Banner/Servicess/Servicess';
 import './Home.css'
 import JoinUs from './JoinSection/JoinUs';
+import OurStudent from './OurStudet/OurStudent';
 const Home = () => {
     const service = useLoaderData();
 
@@ -22,6 +23,7 @@ const Home = () => {
                 </Link>
             </button>
             <JoinUs></JoinUs>
+            <OurStudent></OurStudent>
         </div>
     );
 };

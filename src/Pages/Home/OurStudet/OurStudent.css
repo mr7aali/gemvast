@@ -1,0 +1,24 @@
+
+
+.student-container{
+    display: flex;
+    justify-content: space-between;
+}
+.student-container .student{
+
+
+  height: 500px;
+  width: 300px;
+}
+.img-div{
+    display: inline-block;
+    width: 300px;
+    height: 410px;
+ 
+    background-color: antiquewhite;
+   
+}
+.img-div img{
+    height: 100%;
+    width: 100%;
+}
