@@ -1,0 +1,13 @@
+.review-container{
+    background-color: aliceblue;
+    height: 500px;
+    border-radius: 15px;
+    margin-bottom: 50px;
+    padding-top: 50px;
+}
+
+textarea{
+    
+   padding: 10px;
+    
+}

@@ -3,7 +3,7 @@ import Card from '../../Card/Card';
 import './Servicess.css'
 
 const Servicess = ({service}) => {
-    console.log(service)
+  
     
   
     return (

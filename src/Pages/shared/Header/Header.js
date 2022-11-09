@@ -17,7 +17,16 @@ const Header = () => {
                             <Link className='m-5 text-base' to='/home'>HOME</Link>
                             <Link className='m-5 text-base' to='/services'>SERVICES</Link>
                             <Link className='m-5 text-base' to='/blog'>BLOG</Link>
-                            <Link className='m-5 text-base' to='/contact'>CONTACT</Link>
+
+                            {
+                                user?.uid ?
+                                    <>
+                                        <Link className='m-5 text-base' >My Reviews</Link>
+                                        <Link className='m-5 text-base' >Add Service</Link>
+                                    </>
+                                    :
+                                    <></>
+                            }
                         </ul>
                     </div>
                     <Link to='/' href=' ' >
@@ -31,7 +40,18 @@ const Header = () => {
                         <Link className='m-5 text-2xl' to='/'>HOME</Link>
                         <Link className='m-5 text-2xl' to='/services'>SERVICES</Link>
                         <Link className='m-5 text-2xl' to='/blog'>BLOG</Link>
-                        <Link className='m-5 text-2xl' to='/contact'>CONTACT</Link>
+
+
+                        {
+                            user?.uid ?
+                                <>
+                                    <Link className='m-5 text-2xl' >MY REVIEWS</Link>
+                                    <Link className='m-5 text-2xl' >ADD SERVICE</Link>
+                                </>
+                                :
+                                <></>
+                        }
+
 
                     </ul>
                 </div>
