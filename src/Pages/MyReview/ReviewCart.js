@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const ReviewCart = ({review,handleDelete}) => {
     console.log(review)
@@ -10,6 +11,9 @@ const ReviewCart = ({review,handleDelete}) => {
                     <h2 className="card-title">{review.serviceName}</h2>
                     <p>{review.review}</p>
                     <div className="card-actions justify-end">
+
+                    <Link to={`/myreviews/edit/${review._id}`}><button  className="btn btn-outline mr-5">Edit</button></Link>
+                    
                         <button onClick={()=>handleDelete(review)} className="btn btn-primary">Delete</button>
                     </div>
                 </div>

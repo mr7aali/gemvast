@@ -2,6 +2,8 @@ import Addservices from "../Pages/AddServicess/Addservices";
 import AllServices from "../Pages/AllServices/AllServices";
 import Blog from "../Pages/Blog/Blog";
 import Details from "../Pages/Details/Details";
+import EditReveiw from "../Pages/EditRevew/EditReveiw";
+import F4f from "../Pages/F4f";
 import Login from "../Pages/Login/Login";
 import MyReview from "../Pages/MyReview/MyReview";
 import SingUp from "../Pages/SingUp/SingUp";
@@ -19,7 +21,7 @@ const router= createBrowserRouter([
             {
                 path:'/',
                 element:<Home></Home>,
-                loader:()=> fetch('http://localhost:5000/service')
+                loader:()=> fetch('https://gemvast-server.vercel.app/service')
             },
             {
                 path:'/login',
@@ -32,13 +34,13 @@ const router= createBrowserRouter([
             {
                 path:'/services',
                 element:<AllServices> </AllServices>,
-                loader:()=> fetch('http://localhost:5000/allservice')
+                loader:()=> fetch('https://gemvast-server.vercel.app/allservice')
 
             },
             {
-                //http://localhost:5000/services/636b4bd0774bc73e7540bf97
+                //https://gemvast-server.vercel.app/services/636b4bd0774bc73e7540bf97
                 path:'/services/:id',
-                 loader:({params})=>fetch(`http://localhost:5000/services/${params.id}`),
+                 loader:({params})=>fetch(`https://gemvast-server.vercel.app/services/${params.id}`),
                 element:<Details></Details>
             },
             {
@@ -48,15 +50,24 @@ const router= createBrowserRouter([
             {
                 path:'/myreviews/:email',
                 element:<PrivetRout><MyReview></MyReview></PrivetRout>,
-                loader:({params})=>fetch(`http://localhost:5000/myreviews/${params.email}`)
+                loader:({params})=>fetch(`https://gemvast-server.vercel.app/myreviews/${params.email}`)
             },
             {
                 path:'/addservice',
                 element:<PrivetRout><Addservices></Addservices></PrivetRout>
+            },
+            {
+                path:'/myreviews/edit/:id',
+                element:<EditReveiw></EditReveiw>,
+                loader:({params})=>fetch(`https://gemvast-server.vercel.app/myreviews/edit/${params.id}`)
             }
 
            
         ]
+    },
+    {
+        path:'*',
+        element:<F4f></F4f>
     }
   
 ])

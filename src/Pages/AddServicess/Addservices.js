@@ -8,7 +8,7 @@ const Addservices = () => {
       
         console.log(service)
         
-        fetch('http://localhost:5000/addservices', {
+        fetch('https://gemvast-server.vercel.app/addservices', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -38,7 +38,7 @@ const Addservices = () => {
 
 
     return (
-        <div className="hero h-full max-w-screen-xl mx-auto">
+        <div className="hero h-full max-w-screen-xl mx-auto mb-20">
             <div className=" w-1/2">
 
                 <div className="card flex-shrink-0 w-full  shadow-2xl bg-base-100">

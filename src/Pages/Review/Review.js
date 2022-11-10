@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { toast } from 'react-toastify';
+import { } from 'react-toastify';
 import { AuthContext } from '../../contexts/AuthProvider';
 import './Review.css'
 const Review = ({ id,title }) => {
@@ -17,7 +17,7 @@ const Review = ({ id,title }) => {
     const handletextarea = event => {
         event.preventDefault();
         console.log(reviw);
-        fetch('http://localhost:5000/services', {
+        fetch('https://gemvast-server.vercel.app/services', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
