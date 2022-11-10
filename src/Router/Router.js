@@ -1,9 +1,11 @@
+import Addservices from "../Pages/AddServicess/Addservices";
 import AllServices from "../Pages/AllServices/AllServices";
 import Blog from "../Pages/Blog/Blog";
 import Details from "../Pages/Details/Details";
 import Login from "../Pages/Login/Login";
 import MyReview from "../Pages/MyReview/MyReview";
 import SingUp from "../Pages/SingUp/SingUp";
+import PrivetRout from "../PrivetRout/PrivetRout";
 
 const { createBrowserRouter } = require("react-router-dom");
 const { default: Main } = require("../Layout/Main");
@@ -45,8 +47,12 @@ const router= createBrowserRouter([
             },
             {
                 path:'/myreviews/:email',
-                element:<MyReview></MyReview>,
+                element:<PrivetRout><MyReview></MyReview></PrivetRout>,
                 loader:({params})=>fetch(`http://localhost:5000/myreviews/${params.email}`)
+            },
+            {
+                path:'/addservice',
+                element:<PrivetRout><Addservices></Addservices></PrivetRout>
             }
 
            

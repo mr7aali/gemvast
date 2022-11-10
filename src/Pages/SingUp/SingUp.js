@@ -1,9 +1,10 @@
 import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import  { AuthContext } from '../../contexts/AuthProvider';
+import { TabTitle } from '../../utility/GenarelFunction';
 // import img1 from '../../assets/7000961.jpg'
 const SingUp = () => {
-
+  TabTitle("Sing Up")
     const [user, setUser] = useState({});
 
     const {createUser,singWithGoogle} = useContext(AuthContext);

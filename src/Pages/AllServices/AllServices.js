@@ -1,8 +1,10 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
+import { TabTitle } from '../../utility/GenarelFunction';
 import Card from '../Home/Card/Card';
 import './AllServices.css'
 const AllServices = () => {
+    TabTitle("Gemvast . Services")
     const service = useLoaderData();
     return (
         <div className='max-w-screen-xl mx-auto'>

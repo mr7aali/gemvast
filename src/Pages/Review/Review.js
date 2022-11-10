@@ -1,5 +1,6 @@
 import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import { AuthContext } from '../../contexts/AuthProvider';
 import './Review.css'
 const Review = ({ id,title }) => {
@@ -28,6 +29,7 @@ const Review = ({ id,title }) => {
             .then(data => {
                 console.log(data)
                 event.target.reset();
+                
             })
     }
 

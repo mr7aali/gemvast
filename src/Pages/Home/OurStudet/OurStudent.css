@@ -4,11 +4,12 @@
     display: flex;
     justify-content: space-between;
 }
+
 .student-container .student{
-
-
+  margin: 0 auto;
   height: 500px;
   width: 300px;
+  margin-bottom: 25px;
 }
 .img-div{
     display: inline-block;
@@ -21,4 +22,17 @@
 .img-div img{
     height: 100%;
     width: 100%;
+}
+@media only screen and  (max-width:1290px){
+    .student-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+
+}
+@media only screen and  (max-width:1290px){
+    .student-container{
+        grid-template-columns: 1fr;
+    }
 }

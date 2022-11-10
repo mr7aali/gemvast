@@ -1,6 +1,18 @@
 .services-container{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-   
     margin: 100px auto;
+}
+
+
+/* @media only screen and (min-width:689px) and (max-width:1250px) */
+@media only screen and  (max-width:1250px){
+ .services-container{
+    grid-template-columns: 1fr 1fr;
+ }
+}
+@media only screen and  (max-width:785px){
+ .services-container{
+    grid-template-columns: 1fr;
+ }
 }

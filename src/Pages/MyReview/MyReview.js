@@ -2,8 +2,10 @@ import React, { useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import ReviewCart from './ReviewCart';
 import './MyReview.css'
+import { TabTitle } from '../../utility/GenarelFunction';
+import { toast } from 'react-toastify';
 const MyReview = () => {
-
+    TabTitle("Gemvast . Reviews")
     const Review = useLoaderData();
     const [displayReview, setDIsplayReview] = useState(Review)
 
@@ -20,6 +22,9 @@ const MyReview = () => {
                         alert("Delete Successfully");
                         const remaing = displayReview.filter(rev => rev._id !== review._id)
                         setDIsplayReview(remaing)
+                        toast('Successfully deleted');
+                       
+                    
                     }
                 }
                 )
@@ -31,7 +36,7 @@ const MyReview = () => {
     return (
         <div className='max-w-screen-xl mx-auto'>
            {
-                Review?.length ?
+               displayReview?.length ?
 
                     <div className='max-w-screen-xl mx-auto'>
                         <h2 className='text-center text-5xl font-bold mb-10'>Your All <span className='text-red-700'>Reviews</span></h2>

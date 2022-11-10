@@ -1,6 +1,8 @@
 import React from 'react';
+import { TabTitle } from '../../utility/GenarelFunction';
 import './Blog.css'
 const Blog = () => {
+    TabTitle("Gemvast . Blog")
     return (
         <div className='blog-page max-w-screen-xl mx-auto'>
             <div>

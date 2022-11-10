@@ -12,3 +12,25 @@
     background-color: #F7F7F7;  
     padding-top: 50px;
 }
+
+@media only screen and  (max-width:1305px){
+    .JoinMeCard{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+     
+      padding-left: 50px;
+    }
+}
+@media only screen and  (max-width:680px){
+     .JoinMeCard{
+      padding-left: 0;
+      grid-template-columns: 1fr ;
+      margin: 0 auto;
+      
+     }
+     .JoinMeCard div{
+      
+      margin: 0 auto;
+     }
+
+}

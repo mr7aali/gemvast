@@ -2,12 +2,19 @@ import React, { useContext } from 'react';
 
 import './Login.css'
 // import img1 from '../../assets/7000961.jpg'
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthProvider';
+import { TabTitle } from '../../utility/GenarelFunction';
+import { toast } from 'react-toastify';
 const Login = () => {
-
+    TabTitle('Login');
     const { logIn,singWithGoogle } = useContext(AuthContext);
 
+    const navigate = useNavigate();
+ 
+    const location = useLocation();
+    const from = location.state?.from?.pathname || "/";
+  
     const handleSubmit = (event) => {
         event.preventDefault();
         const email = event.target.email.value;
@@ -16,6 +23,8 @@ const Login = () => {
             .then(result => {
                 const user = result.user;
                 console.log(user);
+                toast("Welcome to Gemvast");
+                navigate(from, { replace: true });
             })
             .catch(error=>console.error(error));
     }
@@ -24,6 +33,8 @@ const Login = () => {
         .then(result=>{
             const user = result.user;
             console.log(user);
+            toast("Welcome to Gemvast");
+            navigate(from, { replace: true });
         })
     }
 

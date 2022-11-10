@@ -2,3 +2,15 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 }
+
+@media only screen and  (max-width:1190px){
+  .reviewCart-container{
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media only screen and  (max-width:780px){
+  .reviewCart-container{
+    grid-template-columns: 1fr ;
+  }
+}

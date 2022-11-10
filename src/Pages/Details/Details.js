@@ -1,10 +1,11 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
+import { TabTitle } from '../../utility/GenarelFunction';
 import Review from '../Review/Review';
 import './Details.css'
 const Details = () => {
     const service = useLoaderData();
-   
+   TabTitle("Gemvast . details")
     const {details,photo,price,title,_id}= service;
     return (
        <div>
