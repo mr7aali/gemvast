@@ -1,6 +1,8 @@
 import AllServices from "../Pages/AllServices/AllServices";
+import Blog from "../Pages/Blog/Blog";
 import Details from "../Pages/Details/Details";
 import Login from "../Pages/Login/Login";
+import MyReview from "../Pages/MyReview/MyReview";
 import SingUp from "../Pages/SingUp/SingUp";
 
 const { createBrowserRouter } = require("react-router-dom");
@@ -16,7 +18,6 @@ const router= createBrowserRouter([
                 path:'/',
                 element:<Home></Home>,
                 loader:()=> fetch('http://localhost:5000/service')
-
             },
             {
                 path:'/login',
@@ -37,6 +38,15 @@ const router= createBrowserRouter([
                 path:'/services/:id',
                  loader:({params})=>fetch(`http://localhost:5000/services/${params.id}`),
                 element:<Details></Details>
+            },
+            {
+                path:'/blog',
+                element:<Blog></Blog>
+            },
+            {
+                path:'/myreviews/:email',
+                element:<MyReview></MyReview>,
+                loader:({params})=>fetch(`http://localhost:5000/myreviews/${params.email}`)
             }
 
            

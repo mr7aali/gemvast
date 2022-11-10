@@ -4,8 +4,8 @@ import Review from '../Review/Review';
 import './Details.css'
 const Details = () => {
     const service = useLoaderData();
- 
-    const {details,photo,price,title}= service;
+   
+    const {details,photo,price,title,_id}= service;
     return (
        <div>
          <div className='my-40 details-div max-w-screen-xl	mx-auto'>
@@ -21,7 +21,10 @@ const Details = () => {
                 </div>
             </div>
         </div>
-        <Review></Review>
+        <Review 
+        id={_id}
+        title={title}
+        ></Review>
        </div>
     );
 };

@@ -1,13 +1,29 @@
 .review-container{
     background-color: aliceblue;
-    height: 500px;
+   
     border-radius: 15px;
     margin-bottom: 50px;
-    padding-top: 50px;
+    padding: 50px;
+
 }
 
 textarea{
     
    padding: 10px;
+   width: 90%;
     
+}
+.imgandtextarea{
+   
+    display: flex;
+
+}
+.reviwer-img{
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
+    background-color: blanchedalmond;
+}
+.reviwer-img img{
+    border-radius: 50px;
 }

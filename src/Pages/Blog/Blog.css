@@ -1,0 +1,10 @@
+.blog-page{
+    margin-bottom: 100px;
+    margin-top: 100px;
+}
+.blog-page div{
+  margin: 30px 0px;
+}
+.blog-page div h1{
+    padding-bottom: 25px;
+}

@@ -6,7 +6,7 @@ const Header = () => {
     const { user, LogOut } = useContext(AuthContext);
     return (
         <div className='bg-base-200 mb-10'>
-            <div className="navbar  bg- base-200 max-w-screen-xl mx-auto">
+            <div className="navbar  bg-base-200 max-w-screen-xl mx-auto">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -21,8 +21,8 @@ const Header = () => {
                             {
                                 user?.uid ?
                                     <>
-                                        <Link className='m-5 text-base' >My Reviews</Link>
-                                        <Link className='m-5 text-base' >Add Service</Link>
+                                        <Link to={'/myreviews'} className='m-5 text-base' >My Reviews</Link>
+                                        <Link to='/addservice' className='m-5 text-base' >Add Service</Link>
                                     </>
                                     :
                                     <></>
@@ -39,18 +39,19 @@ const Header = () => {
                         {/* ///////////////// */}
                         <Link className='m-5 text-2xl' to='/'>HOME</Link>
                         <Link className='m-5 text-2xl' to='/services'>SERVICES</Link>
-                        <Link className='m-5 text-2xl' to='/blog'>BLOG</Link>
+                        
 
 
                         {
                             user?.uid ?
                                 <>
-                                    <Link className='m-5 text-2xl' >MY REVIEWS</Link>
-                                    <Link className='m-5 text-2xl' >ADD SERVICE</Link>
+                                    <Link to={`/myreviews/${user.email}`} className='m-5 text-2xl' >MY REVIEWS</Link>
+                                    <Link to='/addservice' className='m-5 text-2xl' >ADD SERVICE</Link>
                                 </>
                                 :
                                 <></>
                         }
+                        <Link className='m-5 text-2xl' to='/blog'>BLOG</Link>
 
 
                     </ul>
