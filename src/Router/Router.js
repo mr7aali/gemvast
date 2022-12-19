@@ -21,7 +21,7 @@ const router= createBrowserRouter([
             {
                 path:'/',
                 element:<Home></Home>,
-                loader:()=> fetch('https://gemvast-server.vercel.app/service')
+                loader:()=> fetch('http://localhost:5000/service')
             },
             {
                 path:'/login',
@@ -34,13 +34,13 @@ const router= createBrowserRouter([
             {
                 path:'/services',
                 element:<AllServices> </AllServices>,
-                loader:()=> fetch('https://gemvast-server.vercel.app/allservice')
+                loader:()=> fetch('http://localhost:5000/allservice')
 
             },
             {
-                //https://gemvast-server.vercel.app/services/636b4bd0774bc73e7540bf97
+                //http://localhost:5000/services/636b4bd0774bc73e7540bf97
                 path:'/services/:id',
-                 loader:({params})=>fetch(`https://gemvast-server.vercel.app/services/${params.id}`),
+                 loader:({params})=>fetch(`http://localhost:5000/services/${params.id}`),
                 element:<Details></Details>
             },
             {
@@ -50,7 +50,7 @@ const router= createBrowserRouter([
             {
                 path:'/myreviews/:email',
                 element:<PrivetRout><MyReview></MyReview></PrivetRout>,
-                loader:({params})=>fetch(`https://gemvast-server.vercel.app/myreviews/${params.email}`)
+                loader:({params})=>fetch(`http://localhost:5000/myreviews/${params.email}`)
             },
             {
                 path:'/addservice',
@@ -59,7 +59,7 @@ const router= createBrowserRouter([
             {
                 path:'/myreviews/edit/:id',
                 element:<EditReveiw></EditReveiw>,
-                loader:({params})=>fetch(`https://gemvast-server.vercel.app/myreviews/edit/${params.id}`)
+                loader:({params})=>fetch(`http://localhost:5000/myreviews/edit/${params.id}`)
             }
 
            

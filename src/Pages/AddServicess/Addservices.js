@@ -8,7 +8,7 @@ const Addservices = () => {
       
         console.log(service)
         
-        fetch('https://gemvast-server.vercel.app/addservices', {
+        fetch('http://localhost:5000/addservices', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -22,8 +22,6 @@ const Addservices = () => {
                 event.target.reset();
                 toast('done');
             })
-
-
     }
 
     const handleInputBlur = event => {

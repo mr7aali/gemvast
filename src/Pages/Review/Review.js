@@ -17,7 +17,7 @@ const Review = ({ id,title }) => {
     const handletextarea = event => {
         event.preventDefault();
         console.log(reviw);
-        fetch('https://gemvast-server.vercel.app/services', {
+        fetch('http://localhost:5000/services', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

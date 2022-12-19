@@ -1,16 +1,20 @@
 import React from 'react';
-import { useLoaderData } from 'react-router-dom';
+import { useContext } from 'react';
+import { useLoaderData, useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
+import { AuthContext } from '../../contexts/AuthProvider';
 
 const EditReveiw = () => {
   const review = useLoaderData();
- 
+  const navigate = useNavigate();
+  const {user}=useContext(AuthContext);
 
     const handletextarea = event => {
         review.review= event.target.review.value;
       
 
         event.preventDefault();
-        fetch(`https://gemvast-server.vercel.app/myreviews/edit/${review._id}`,{
+        fetch(`http://localhost:5000/myreviews/edit/${review._id}`,{
             method:"PUT",
             headers:{
                 'content-type':'application/json'
@@ -20,11 +24,13 @@ const EditReveiw = () => {
         .then(res=>res.json())
         .then(data=>{
             console.log(data);
+           navigate(`/myreviews/${user?.email}`)
+           toast('Review Updated')
         })
 
     }
 
-
+   // http://localhost:3000mdsukkur9057@gmail.com
 
     return (
         <div className='max-w-screen-xl mx-auto'>
